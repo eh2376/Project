@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Project</title>
+        <link href="styles.css" rel="stylesheet"/>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <!--Tags h1-h6 are only tags-->
+            <h1>Welcome to The Game</h1>
+            <h2>Player's point: {{health}}</h2>
+            <!-- bag image -->
+            <div id="monster" ></div>
+            <!-- bag health bar -->
+            <div id="bag-health">
+                <div v-bind:style="{ width: health + '%' }"></div>
+            </div>
+
+            <!-- game control buttons -->
+            <div id="controls">
+                <button v-on:click="attack" v-show="!ended">Attack</button>
+                <button v-on:click="superAttack" v-show="!ended">Super Attack</button>
+                <button v-on:click="heal">Heal</button>
+                <button v-on:click="restart">Start Over</button>
+            </div>
+            
+
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
