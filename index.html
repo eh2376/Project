@@ -8,6 +8,7 @@
     </head>
     <body>
         <div id="vue-app">
+            <script src="/dist/build.js"></script>
             <!--Tags h1-h6 are only tags-->
             <h1>Welcome to The Game</h1>
             <h2>Player's points: {{health}}</h2>
@@ -20,10 +21,10 @@
 
             <!-- game control buttons -->
             <div id="controls">
-                <button v-on:click="attack" v-show="!ended">Attack</button>
-                <button v-on:click="superAttack" v-show="!ended">Super Attack</button>
-                <button v-on:click="heal">Heal</button>
-                <button v-on:click="restart">Start Over</button>
+                <button @click="attack" v-show="!ended">Attack</button>
+                <button @click="superAttack" v-show="!ended">Super Attack</button>
+                <button @click="heal">Heal</button>
+                <button @click="restart">Start Over</button>
             </div>
             
 
